@@ -127,7 +127,7 @@ html {
 }
 
 .image-design {
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 /* Overview */
@@ -316,7 +316,7 @@ figure.fig_img {
   overflow: hidden;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
+  /* max-width: 310px; */
   max-height: 220px;
   width: 100%;
   background: #000000;
@@ -332,10 +332,11 @@ figure.fig_img *:after {
   transition: all 0.3s ease-in-out;
 }
 figure.fig_img img {
-  max-width: 100%;
+  min-width: 100%;
   position: relative;
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
+  object-fit: cover;
 }
 figure.fig_img figcaption {
   position: absolute;
@@ -619,5 +620,42 @@ figure.fig_img.hover h3 {
 @media screen and (min-width: 990px) {
   .navbar-nav {
     justify-content: flex-end;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* Thank You Page */
+
+#thanku_section {
+  margin-top: 5em !important;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#thanku_section h2 {
+  font-family: MyCustomFont;
+  letter-spacing: 0.1em;
+  font-size: 5em;
+}
+
+#thanku_section p {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  #thanku_section h2 {
+    font-size: 2.3em;
+  }
+  #thanku_section p {
+    padding: 0 1.2em;
+    font-size: 0.8em;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 990px) {
+  .overview_img {
+    height: 200px;
   }
 }
